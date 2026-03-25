@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Hendra Pratama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] } } } }</script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap'); body { font-family: 'Inter', sans-serif; } h1, h2, h3 { font-family: 'Merriweather', serif; }</style>
+</head>
+<body class="bg-slate-50 pt-20">
+
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center">
+                    <i class="ph-fill ph-scales text-[32px] text-amber-500 mr-2"></i>
+                    <div><h1 class="text-white text-xl font-bold">HENDRA PRATAMA</h1></div>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-slate-300 hover:text-amber-500 text-sm font-medium">Beranda</a>
+                    <a href="profil.html" class="text-slate-300 hover:text-amber-500 text-sm font-medium">Profil</a>
+                    <a href="layanan.html" class="text-amber-500 text-sm font-medium">Layanan</a>
+                    <a href="pengalaman.html" class="text-slate-300 hover:text-amber-500 text-sm font-medium">Pengalaman</a>
+                    <a href="kontak.html" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-sm text-sm font-medium">Konsultasi</a>
+                </div>
+                <div class="md:hidden flex items-center"><button onclick="toggleMenu()" class="text-white"><i id="menu-icon" class="ph ph-list text-3xl"></i></button></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-4 text-slate-300 border-b border-slate-800">Beranda</a>
+                <a href="layanan.html" class="block px-3 py-4 text-amber-500 border-b border-slate-800">Layanan</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h3 class="text-amber-600 font-semibold uppercase text-sm mb-2">Area Praktik</h3>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Layanan Hukum Komprehensif</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100 group">
+                <div class="h-14 w-14 bg-slate-900 rounded-sm flex items-center justify-center mb-6 group-hover:bg-amber-600 transition-colors"><i class="ph-fill ph-buildings text-[28px] text-white"></i></div>
+                <h3 class="text-xl font-bold mb-3">Hukum Perusahaan</h3>
+                <p class="text-slate-600 text-sm">Pendirian PT/PMA, restrukturisasi perusahaan, merger & akuisisi.</p>
+            </div>
+            <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100 group">
+                <div class="h-14 w-14 bg-slate-900 rounded-sm flex items-center justify-center mb-6 group-hover:bg-amber-600 transition-colors"><i class="ph-fill ph-file-text text-[28px] text-white"></i></div>
+                <h3 class="text-xl font-bold mb-3">Penyusunan Kontrak</h3>
+                <p class="text-slate-600 text-sm">Drafting, review, dan negosiasi berbagai perjanjian komersial.</p>
+            </div>
+            <div class="bg-white p-8 rounded-sm shadow-sm border border-slate-100 group">
+                <div class="h-14 w-14 bg-slate-900 rounded-sm flex items-center justify-center mb-6 group-hover:bg-amber-600 transition-colors"><i class="ph-fill ph-scales text-[28px] text-white"></i></div>
+                <h3 class="text-xl font-bold mb-3">Sengketa Bisnis</h3>
+                <p class="text-slate-600 text-sm">Litigasi perdata, arbitrase, dan mediasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }</script>
+</body>
+</html>
